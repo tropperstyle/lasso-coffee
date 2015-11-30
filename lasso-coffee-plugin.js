@@ -45,7 +45,7 @@ module.exports = function myPlugin(lasso, config) {
             }
         });
 
-    // lasso.dependencies.registerRequireExtension('coffee', function(path, context, callback) {
-    //     callback(null, 'module.exports=function(coffee) { return ' + coffee.compile(src) + '\n};');
-    // });
+    lasso.dependencies.registerRequireExtension('coffee', function(path, context, callback) {
+        callback(null, 'module.exports=function(coffee) { return ' + coffee.compile(src) + '\n};');
+    });
 };
